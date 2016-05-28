@@ -1,0 +1,24 @@
+<table>
+  <th><h2>Person Name</h2></th>
+  <tr>
+      <td align="center"><a href="/figures/<%= @figure.id %>/edit"><%= @figure.name %></a>
+      <ul>
+      <h3>Landmarks:</h3>
+        <%@figure.landmarks.each do |landmark|%>
+        <li><%=landmark.name%>
+          <%if landmark.year_completed != nil %>
+          created in <%=landmark.year_completed%>
+        <%end%></li>
+        <%end%>
+      </ul>
+      <ul>
+      <h3>Titles:</h3>
+        <%@figure.titles.each do |title|%>
+        <li><%=title.name%></li>
+        <%end%>
+      </ul>
+  </tr>
+      </td>
+</table>
+<br>
+<a class="button" href="/figures">Go Home</a>

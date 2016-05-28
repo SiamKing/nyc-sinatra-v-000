@@ -1,0 +1,8 @@
+<h1>Landmarks</h1>
+<%@landmarks.all.each do |landmark|%>
+<a href="/landmarks/<%=landmark.id%>/edit"><%=landmark.name%> <%=landmark.year_completed%></a><br>
+
+<%end%>
+
+<br></br>
+<a class="button" href="/landmarks">View Landmarks</a>
